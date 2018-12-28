@@ -32,7 +32,7 @@ body {
     background-position: top;
     position: relative;
 
-    clip-path: polygon(0 0,100% 0,100% 80vh ,0 100%)
+    clip-path: polygon(0 0,100% 0,100% 75vh ,0 100%)
 }
 
 .logo-box{
@@ -45,7 +45,7 @@ body {
 }
 
 .logo{
-    height: 35px;
+    height: 45px;
    
 
 }
@@ -62,18 +62,70 @@ body {
     color: white;
     text-transform: uppercase;
 
+    backface-visibility: hidden;
+
 }
 
 .heading-primary-main{
     display: block;
     font-size: 60px;
     letter-spacing: 35px;
-    font-weight: 400;
+    font-weight: 700;
+
+    animation-name: moveinleft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
 }
+
+
 
 .heading-primary-sub{
     display: block;
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 900;
     letter-spacing: 17px;
+    
+    /*animation-name: moveinright;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;*/
+    animation: moveinright 1s ease-out;
 }
+
+@keyframes moveinleft{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+
+}
+
+@keyframes moveinright{
+
+    0%{
+        opacity: 0%;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-20px);
+    }
+
+    100%{
+
+        opacity: 100%;
+        transform: translate(0);
+
+    }
+
+}
+
