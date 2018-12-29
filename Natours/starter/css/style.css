@@ -44,10 +44,15 @@ body {
 
 }
 
+
 .logo{
     height: 45px;
    
 
+}
+
+.logo:hover{
+    transform: translateX(10px);
 }
 
 .text-box{
@@ -55,6 +60,7 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-50%,-50%);
+    text-align: center;
 
 }
 
@@ -63,6 +69,7 @@ body {
     text-transform: uppercase;
 
     backface-visibility: hidden;
+    margin-bottom: 60px;
 
 }
 
@@ -128,4 +135,31 @@ body {
     }
 
 }
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+}
+
+.btn:active{
+    transform: translateY(-1px);
+}
+
+.btn-white{
+    background-color: #ffffff;
+    color: #777777
+
+}
+
+
 
